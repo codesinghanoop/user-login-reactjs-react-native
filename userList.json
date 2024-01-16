@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+          "userName": "anoop1@email.com",
+          "password": "1asas12",
+          "country": "AE"
+        },
+        {
+          "userName": "anoop2@email.com",
+          "password": "asas121",
+          "country": "IN"
+        },
+        {
+          "userName": "anoop3@email.com",
+          "password": "anoop_singh",
+          "country": "DE"
+        },
+        {
+          "userName": "anoop4@email.com",
+          "password": "anoop-singh",
+          "country": "KSA"
+        }
+    ]
+}

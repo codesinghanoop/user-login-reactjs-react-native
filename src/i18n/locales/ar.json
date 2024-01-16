@@ -1,0 +1,16 @@
+{
+  "login": {
+    "changeCountry": "تغيير الدولة",
+    "UserName": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "invalidUserName": "اسم مستخدم غير صالح",
+    "userNameLength": "يجب أن يكون اسم المستخدم",
+    "charLong": "الحروف طويلة",
+    "passwordLength": "يجب أن تكون كلمة المرور مكونة من 6 أحرف"
+  },
+  "dashboard": {
+    "loginUsername": "اسم المستخدم المسجل الدخول",
+    "langSelected": "تم تحديد لانج"
+  }
+}

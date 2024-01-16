@@ -1,0 +1,16 @@
+{
+  "login": {
+    "changeCountry": "Change Country",
+    "UserName": "UserName",
+    "password": "Password",
+    "login": "Login",
+    "invalidUserName": "Invalid Username",
+    "userNameLength": "Username must be",
+    "charLong": "characters long",
+    "passwordLength": "password must be 6 characters long"
+  },
+  "dashboard": {
+    "loginUsername": "LoggedIn UserName",
+    "langSelected": "Lang selected"
+  }
+}

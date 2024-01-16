@@ -1,0 +1,16 @@
+{
+    "login": {
+      "changeCountry": "देश बदलें",
+      "UserName": "उपयोगकर्ता नाम",
+      "password": "पासवर्ड",
+      "login": "लॉग इन करें",
+      "invalidUserName": "अमान्य उपयोगकर्ता नाम",
+      "userNameLength": "उपयोगकर्ता नाम अवश्य होना चाहिए",
+      "charLong": "लंबे पात्रों",
+      "passwordLength": "पासवर्ड 6 अक्षर लंबा होना चाहिए"
+    },
+    "dashboard": {
+      "loginUsername": "लॉग इन उपयोगकर्ता नाम",
+      "langSelected": "लैंग चयनित"
+    }
+  }
