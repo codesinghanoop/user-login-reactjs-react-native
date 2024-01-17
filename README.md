@@ -1,4 +1,5 @@
 Note1:- Both mobile and web part of assignment in the same repo
+
 Note2:- Used mockapi.io to store & fetch data
 
 # Fact
@@ -24,7 +25,9 @@ First, Clone repo (git clone https://github.com/codesinghanoop/user-login-reactj
 
 ## Step 2: Install packages
 
-Install packages by running yarn install
+Install packages by running **yarn install**
+Start metro server by running **yarn start**
+
 ### For Android
 
 ```bash
