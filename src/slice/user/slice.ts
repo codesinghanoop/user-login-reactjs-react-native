@@ -1,5 +1,4 @@
 import React from 'react';
-// import {I18nManager} from 'react-native';
 import {createSlice, PayloadAction, createAction} from '@reduxjs/toolkit';
 import {PURGE} from 'redux-persist';
 import {CountryList, Languages, theme} from '../../constants/App';
@@ -10,6 +9,8 @@ export const createUserAction =
   createAction<IUserPayload>('ACTION/CREATE_USER');
 export const getUserListAction = createAction('ACTION/GET_USER_LIST');
 export const loginAction = createAction<IUserPayload>('ACTION/LOGIN_USER');
+export const changeLangAction =
+  createAction<IUserPayload>('ACTION/CHANGE_LANG');
 
 type IUser = {
   userName?: string;
@@ -57,13 +58,10 @@ export const userAuthSlice = createSlice({
     /**
      * Set User lang
      */
-    setUserLang: async (state, {payload}: PayloadAction<string>) => {
-      console.log('payloadpayloadpayload', payload);
+    setUserLang: (state, {payload}: PayloadAction<string>) => {
+      state.lang = payload;
       const isRTL = payload === 'ar';
       i18n.changeLanguage(payload);
-      await import('react-native').I18nManager.forceRTL(isRTL);
-      I18nManager.allowRTL(isRTL);
-      state.lang = payload;
     },
     /**
      * Set User lang on web

@@ -28,6 +28,7 @@ import {
 import {WebRoute} from '../../src/constants/routes';
 import {CountryList, Languages} from '../../src/constants/App';
 import {transformWebModalList} from '../../src/utils';
+import { useTheme } from '../../src/theme/theme';
 
 const LoginScreen = props => {
   const {control, getValues, isValid, errors} = useLogin();
@@ -36,6 +37,7 @@ const LoginScreen = props => {
   const isLoggedIn = useSelector(selectedIsLoggedIn);
   const dispatch = useDispatch();
   const {t} = useTranslation();
+  const theme = useTheme();
 
   const onLogin = () => {
     const userName = getValues('userName');
@@ -71,7 +73,7 @@ const LoginScreen = props => {
   }, [isLoggedIn]);
 
   return (
-    <Container>
+    <Container theme={theme}>
       <InputFieldWeb
         id="filled-basic"
         label={t('login.UserName')}
@@ -93,8 +95,8 @@ const LoginScreen = props => {
       />
       <ErrorText>{errors?.password?.message}</ErrorText>
       <HSpacing />
-      <PrimaryButton>
-        <ButtonTitle onClick={onLogin}>{t('login.login')}</ButtonTitle>
+      <PrimaryButton theme={theme}>
+        <ButtonTitle theme={theme} onClick={onLogin}>{t('login.login')}</ButtonTitle>
       </PrimaryButton>
       <Autocomplete
         id="country"

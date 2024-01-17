@@ -1,5 +1,4 @@
 import {CountryList} from '../constants/App';
-// import {Platform} from 'react-native';
 
 export const validateUaeUsername = (username: string) => {
   const regex = new RegExp(/^[a-zA-Z0-9]*$/); //To check if string is alphanumeric
@@ -77,6 +76,6 @@ export const getUsernameLengthByCountry = (country: string) => {
   }
 };
 
-export const isMobileCode = async () => {
+export const isMobileCode = () => {
   return typeof document !== 'undefined' ? false : true;
 };

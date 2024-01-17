@@ -10,7 +10,9 @@
     "passwordLength": "يجب أن تكون كلمة المرور مكونة من 6 أحرف"
   },
   "dashboard": {
-    "loginUsername": "اسم المستخدم المسجل الدخول",
-    "langSelected": "تم تحديد لانج"
+    "loginUsername": "اسم المستخدم",
+    "langSelected": "تم اختيار اللغة",
+    "countrySelected": "تم اختيار البلد",
+    "logout": "تسجيل خروج"
   }
 }

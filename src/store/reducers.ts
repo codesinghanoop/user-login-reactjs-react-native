@@ -1,6 +1,6 @@
 // Secure Storage library
 import {persistCombineReducers} from 'redux-persist';
-import createSecuredStorage from 'redux-persist-encrypted-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {userAuthSlice} from '../slice/user/slice';
 import {isMobileCode} from '../utils';
 import localStorage from 'redux-persist/es/storage';
@@ -10,11 +10,10 @@ const reducers = {
 };
 
 // Secure storage configurations
-const secureStorage = isMobileCode() ? createSecuredStorage() : localStorage;
+const secureStorage = AsyncStorage;
 const securePersistConfig = {
   key: 'secure',
   storage: secureStorage,
-  timeout: undefined,
   whitelist: [userAuthSlice.name],
 };
 

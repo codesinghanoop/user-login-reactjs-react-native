@@ -10,7 +10,9 @@
     "passwordLength": "password must be 6 characters long"
   },
   "dashboard": {
-    "loginUsername": "LoggedIn UserName",
-    "langSelected": "Lang selected"
+    "loginUsername": "UserName",
+    "langSelected": "Language selected",
+    "countrySelected": "Country selected",
+    "logout": "logout"
   }
 }

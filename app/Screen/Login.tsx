@@ -27,6 +27,7 @@ import {SelectionModal} from '../Component/ModalSelector';
 import {CountryList, Languages} from '../../src/constants/App';
 import {transformModalList} from '../../src/utils';
 import {useTranslation} from 'react-i18next';
+import {useTheme} from '../../src/theme/theme';
 
 const LoginScreen = () => {
   const {control, getValues, isValid, errors} = useLogin();
@@ -36,12 +37,13 @@ const LoginScreen = () => {
   const dispatch = useDispatch();
   const {replace} = useNavigation();
   const {t} = useTranslation();
+  const theme = useTheme();
 
   const onLogin = () => {
     const userName = getValues('userName');
     const password = getValues('password');
     dispatch(
-      loginAction({
+      createUserAction({
         userName,
         password,
         country: userCountry,
@@ -71,7 +73,7 @@ const LoginScreen = () => {
   }, [isLoggedIn]);
 
   return (
-    <Container>
+    <Container theme={theme}>
       <InputField
         placeholder={t('login.UserName')}
         placeholderTextColor="white"
@@ -87,8 +89,10 @@ const LoginScreen = () => {
         secureTextEntry
         errorMessage={errors?.password?.message}
       />
-      <PrimaryButton>
-        <ButtonTitle onPress={onLogin}>{t('login.login')}</ButtonTitle>
+      <PrimaryButton theme={theme}>
+        <ButtonTitle theme={theme} onPress={onLogin}>
+          {t('login.login')}
+        </ButtonTitle>
       </PrimaryButton>
       <SelectionModal
         data={transformModalList(Object.values(CountryList))}

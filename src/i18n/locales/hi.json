@@ -10,7 +10,9 @@
       "passwordLength": "पासवर्ड 6 अक्षर लंबा होना चाहिए"
     },
     "dashboard": {
-      "loginUsername": "लॉग इन उपयोगकर्ता नाम",
-      "langSelected": "लैंग चयनित"
+      "loginUsername": "उपयोगकर्ता नाम",
+      "langSelected": "भाषा चयनित",
+      "countrySelected": "Country selected",
+      "logout": "logout"
     }
   }

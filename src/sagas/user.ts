@@ -22,9 +22,9 @@ export type IUserPayload = {
 function* createUserSaga({payload}: PayloadAction<IUserPayload>) {
   try {
     const response: any = yield call(createNewUser, payload);
-    yield put(setUserCountry(response?.data?.country));
-    yield put(setUserLang(response?.data?.lang));
-    yield put(setUserName(response?.data?.userName));
+    if (response?.data?.userName) {
+      yield put(setUserName(response?.data?.userName));
+    }
   } catch (error: any) {
     // yield put(setErrorAction(error));
   }

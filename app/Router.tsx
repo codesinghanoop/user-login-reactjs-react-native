@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {SafeAreaView, StatusBar} from 'react-native';
+import Toast from 'react-native-toast-message';
 import {selectedLang} from '../src/slice/user/selector';
 import {setUserLang} from '../src/slice/user/slice';
 
@@ -9,6 +10,7 @@ import {AppRoute} from '../src/constants/routes';
 import LoginScreen from './Screen/Login';
 import Dashboard from './Screen/Dashboard';
 import {useDispatch, useSelector} from 'react-redux';
+import ErrorBoundary from './Component/ErrorBoundry';
 
 export type MainStackParamList = {};
 
@@ -61,10 +63,13 @@ const Router = () => {
 
   return (
     <NavigationContainer>
-      <SafeAreaView style={{flex: 1}}>
-        <StatusBar barStyle={'dark-content'} />
-        <StackNavigator />
-      </SafeAreaView>
+      <ErrorBoundary>
+        <SafeAreaView style={{flex: 1}}>
+          <StatusBar barStyle={'dark-content'} />
+          <StackNavigator />
+          <Toast />
+        </SafeAreaView>
+      </ErrorBoundary>
     </NavigationContainer>
   );
 };
